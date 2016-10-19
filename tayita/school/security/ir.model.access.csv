@@ -92,6 +92,3 @@ access_grade_line_teacher,grade.line,model_grade_line,group_school_teacher,1,1,1
 access_teacher_news_teacher,student.news,model_student_news,group_school_teacher,1,1,1,1
 access_teacher_reminder_teacher,student.reminder,model_student_reminder,group_school_teacher,1,1,1,1
 access_subject_syllabus_teacher,subject.syllabus,model_subject_syllabus,group_school_teacher,1,1,1,1
-,,,,,,,
-,,,,,,,
-access_setting_teacher,ir.module.module,model_setting,group_school_teacher,0,0,0,0
