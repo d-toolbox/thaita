@@ -29,7 +29,6 @@ class time_table(models.Model):
     _name = 'time.table'
     
     name = fields.Char('Description') 
-    standard_id = fields.Many2one('school.standard', 'Academic Class', required=True)
     year_id = fields.Many2one('academic.year', 'Year', required=True)
     timetable_ids = fields.One2many('time.table.line', 'table_id', 'TimeTable')
     do_not_create = fields.Boolean('Do not Create')

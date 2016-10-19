@@ -149,8 +149,8 @@
 					<field name="admission_date"/>
 					<field name="gender"/>
 					<field name="state"/>
+					<field name="program"/>
 					<field name="department"/>
-					<field name="school"/>
 				</tree>
 			</field>
 		</record>
@@ -212,8 +212,8 @@
 															<field name="fullname" />
 															<field name="matt_id" invisible="1"/>
 															<field name="year" invisible="1"/>
+															<field name="program" invisible="1"/>
 															<field name="department" invisible="1"/>
-															<field name="school" invisible="1"/>
 															<field name="gender" invisible="1"/>
 															<field name="state" invisible="1"/>
 														</a>
@@ -1425,7 +1425,7 @@
 		</record>
 
 		<!-- School's Menu -->
-		<menuitem icon="terp-project" id="menu_ems" name="EMS"
+		<menuitem icon="terp-project" id="menu_ems" name="Njala Universirty"
 			sequence="4" web_icon="images/icon.png" web_icon_hover="images/hover.png"
 			action="open_board_my_dash_action"/>
 
