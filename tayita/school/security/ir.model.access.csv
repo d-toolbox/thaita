@@ -20,7 +20,6 @@ access_grade_master_admin,grade.master,model_grade_master,group_school_administr
 access_grade_line_admin,grade.line,model_grade_line,group_school_administration,1,1,1,1
 access_admin_news_admin,student.news,school.model_student_news,group_school_administration,1,1,1,1
 access_admin_reminder_admin,student.reminder,school.model_student_reminder,group_school_administration,1,1,1,1
-access_student_cast_admin,student.cast,model_student_cast,group_school_administration,1,1,1,1
 access_res_users_admin,res.users,base.model_res_users,group_school_administration,1,1,1,1
 access_subject_syllabus_admin,subject.syllabus,model_subject_syllabus,group_school_administration,1,1,1,1
 ,,,,,,,
@@ -42,7 +41,6 @@ access_student_relation_master_parent,student.relation.master,model_student_rela
 access_grade_master_parent,grade.master,model_grade_master,group_school_parent,1,0,0,0
 access_grade_line_parent,grade.line,model_grade_line,group_school_parent,1,0,0,0
 access_teacher_reminder_parent,student.reminder,model_student_reminder,group_school_parent,1,0,0,0
-access_student_cast_parent,student.cast,model_student_cast,group_school_parent,1,0,0,0
 access_hr_employee_parent,hr.employee,model_hr_employee,group_school_parent,1,0,0,0
 access_student_reference_parent,student.reference,model_student_reference,group_school_parent,1,0,0,0
 access_parent_news_parent,student.news,model_student_news,group_school_parent,1,0,0,0
@@ -55,7 +53,6 @@ access_mother_toungue_student,mother.toungue,school.model_mother_toungue,group_s
 access_document_type_student,document.type,model_document_type,group_school_student,1,0,0,0
 access_res_partner_student,res.partner,model_res_partner,group_school_student,1,0,0,0
 access_student_relation_master_student,student.relation.master,model_student_relation_master,group_school_student,1,1,0,0
-access_student_cast_student,student.cast,school.model_student_cast,group_school_student,1,1,0,0
 access_student_descipline_student,student.descipline,model_student_descipline,group_school_student,1,0,0,0
 access_student_document_student,student.document,model_student_document,group_school_student,1,0,0,0
 access_student_reminder_student,student.reminder,model_student_reminder,group_school_student,1,1,1,1
@@ -92,7 +89,6 @@ access_student_family_contact_teacher,student.family.contact,model_student_famil
 access_student_relation_master_teacher,student.relation.master,model_student_relation_master,group_school_teacher,1,0,0,0
 access_grade_master_teacher,grade.master,model_grade_master,group_school_teacher,1,1,1,0
 access_grade_line_teacher,grade.line,model_grade_line,group_school_teacher,1,1,1,0
-access_student_cast_teacher,student.cast,model_student_cast,group_school_teacher,1,0,0,0
 access_teacher_news_teacher,student.news,model_student_news,group_school_teacher,1,1,1,1
 access_teacher_reminder_teacher,student.reminder,model_student_reminder,group_school_teacher,1,1,1,1
 access_subject_syllabus_teacher,subject.syllabus,model_subject_syllabus,group_school_teacher,1,1,1,0
