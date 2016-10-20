@@ -580,8 +580,8 @@
 					<field name="admission_date"/>
 					<field name="gender"/>
 					<field name="state"/>
+					<field name="program"/>
 					<field name="department"/>
-					<field name="school"/>
 				</tree>
 			</field>
 		</record>
@@ -1425,7 +1425,7 @@
 		</record>
 
 		<!-- School's Menu -->
-		<menuitem icon="terp-project" id="menu_ems" name="Njala Universirty"
+		<menuitem icon="terp-project" id="menu_ems" name="Njala University"
 			sequence="4" web_icon="images/icon.png" web_icon_hover="images/hover.png"
 			action="open_board_my_dash_action"/>
 
