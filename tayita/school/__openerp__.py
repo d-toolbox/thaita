@@ -20,20 +20,20 @@
 #
 ##############################################################################
 {
-    "name" : "School by Nebula",
+    "name" : "Njala University MIS",
     "version" : "3.0",
-    "author" : "Serpent Consulting Services Pvt. Ltd.",
-    "website" : "http://www.serpentcs.com",
-    "category": "School Management",
+    "author" : "Francis Bangura",
+    "website" : "http://www.facebook.com/butagreeza",
+    "category": "University Management",
     "complexity": "easy",
-    "description": """A module to School Management.
+    "description": """A module to Manage Njala University Academic Affairs.
         A Module support the following functionalities:
         1. Admission Procedure
         2. Student Information
-        3. Parent Information
-        4. Teacher Information
+        3. Department  Information
+        4. Lecturer Information
         5. School Information
-        6. Standard, Medium and Division Information
+        6. Grading Sequence
         7. Subject Information
                     """,
     "depends" : ["hr", "email_template", "crm", "report"],

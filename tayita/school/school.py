@@ -201,14 +201,14 @@ class student_student(models.Model):
     _table = "student_student"
     _description = 'Student Information'
     _inherits = {'res.users': 'user_id'}
-    
+    '''
     @api.one
     def _student_name_get_fnc(self, cr, uid, ids, prop, unknow_none, context=None):
         res = {}
         for record in self.browse(cr, uid, ids, context=context):
             res[record.id] = record.fullname + '/' + record.matt_id
         return res    
-    
+    '''
 
     @api.one
     @api.depends('date_of_birth')
@@ -227,7 +227,7 @@ class student_student(models.Model):
             vals['login']= vals['matt_id']
             vals['password']= vals['matt_id']
         else:
-            raise except_orm(_('Error!'), _('PID not valid, so record will not save.'))
+            raise except_orm(_('Error!'), _('ID not valid, so record will not save.'))
         result = super(student_student, self).create(vals)
         return result
     
@@ -239,7 +239,6 @@ class student_student(models.Model):
     
     user_id =           fields.Many2one('res.users', string='User ID', ondelete="cascade", select=True, required=True)
     student_name =      fields.Char(related='user_id.name',string='Name', store=True, readonly=True)
-#    pid =               fields.Char('Student ID', required=True, default=lambda obj:obj.env['ir.sequence'].get('student.student'), help='Personal IDentification Number')
     matt_id =           fields.Char('Student ID',help='Student Matriculation ID',required=True)
     contact_mobile1 =   fields.Char('Mobile no',)
     photo =             fields.Binary('Photo',default=lambda self: self._get_default_image(self._context.get('default_is_company', False)))
@@ -332,7 +331,7 @@ class student_student(models.Model):
     contact_email =         fields.Char("Email address")
     award_list =            fields.One2many('student.award','award_list_id',string='Award List')
     fullname=               fields.Char(compute='_fullname',string="Full Name")
-    fullname_id=            fields.Char(compute='_student_name_get_fnc',string="Full Name n ID ",store=True)
+#    fullname_id=            fields.Char(compute='_student_name_get_fnc',string="Full Name n ID ",store=True)
     phone=                  fields.Char('Phone Number')
     academic_year=          fields.Many2one('academic.year', 'Academic Year')
     _sql_constraints = [('matt_unique', 'unique(matt_id)', 'Student ID must be unique!')]
@@ -425,7 +424,7 @@ class student_descipline(models.Model):
     _name = 'student.descipline'
                 
     student_id =    fields.Many2one('student.student', 'Student')
-    teacher_id =    fields.Many2one('hr.employee', 'Teacher')
+    lecturer_id =    fields.Many2one('hr.employee', 'Lecturer')
     date =          fields.Date('Date')
     year_id =       fields.Selection([('yr1','Year 1'), 
                                           ('yr2','Year 2'),
@@ -455,7 +454,7 @@ class hr_employee(models.Model):
     def _compute_subject(self):
         ''' This function will automatically computes the modules related to particular lecturer.'''
         subject_obj = self.env['subject.subject']
-        subject_ids = subject_obj.search([('teacher_ids.id','=',self.id)])
+        subject_ids = subject_obj.search([('lecturer_ids.id','=',self.id)])
         sub_list = []
         for sub_rec in subject_ids:
             sub_list.append(sub_rec.id)

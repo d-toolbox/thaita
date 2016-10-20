@@ -22,8 +22,6 @@
 						<group col="4">
 							<group col="2">
 								<separator string="Student Information" colspan="4"/>
-								
-								<field name="fullname_id" help="Level of Student"/>
 								<field name="level" help="Level of Student"/>
 								<field name="academic_year" help="Academic Year of Student"/>
 								<field name="matt_id" placeholder="Mattriculation Number"/>
